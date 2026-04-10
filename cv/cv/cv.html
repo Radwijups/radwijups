@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Radwijupa - Digital CV</title>
+  
+  <link href="../../portofolio/assets/img/profile/My logo-(No BG).png" rel="icon">
+  <link href="../../portofolio/assets/img/profile/My logo-(No BG).png" rel="apple-touch-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link href="../../portofolio/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../portofolio/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../portofolio/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <style>
+    /* -----------------------------------------------------------
+       MONOCHROME CORE THEME - Designed by Assistant
+       ----------------------------------------------------------- */
+    :root {
+      --primary-dark: #111111; /* Hitam pekat */
+      --secondary-dark: #222222; /* Abu-abu sangat tua */
+      --accent-gray: #555555; /* Abu-abu medium untuk teks sekunder */
+      --light-gray: #e0e0e0; /* Abu-abu muda untuk garis/bg */
+      --pure-white: #ffffff;
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--pure-white);
+      color: var(--primary-dark);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+    }
+
+    /* Tipografi */
+    h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 900; }
+    h1 { font-size: 4rem; text-transform: uppercase; letter-spacing: -2px; line-height: 0.9; }
+    h2 { font-size: 2.5rem; margin-bottom: 2rem; position: relative; padding-bottom: 10px; }
+    h2::after { content:''; position: absolute; left:0; bottom:0; width:60px; height:5px; background: var(--primary-dark); }
+    
+    p { font-weight: 300; line-height: 1.8; color: var(--secondary-dark); }
+    
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+    a:hover { color: var(--accent-gray); }
+
+    /* Unique Components */
+    .btn-mono {
+      background-color: var(--primary-dark);
+      color: var(--pure-white);
+      padding: 12px 30px;
+      border-radius: 0; /* Flat design */
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      transition: 0.3s;
+      border: 1px solid var(--primary-dark);
+    }
+    .btn-mono:hover {
+      background-color: var(--pure-white);
+      color: var(--primary-dark);
+    }
+
+    /* -----------------------------------------------------------
+       SECTIONS
+       ----------------------------------------------------------- */
+    
+    /* Hero Section */
+    .hero-mono {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background-color: var(--primary-dark);
+      color: var(--pure-white);
+      position: relative;
+    }
+    .hero-mono p { color: var(--light-gray); }
+    .hero-portrait {
+      width: 100%;
+      height: 80vh;
+      background-image: url('../../portofolio/assets/img/profile/Profile Picture.jpeg'); /* Pastikan path benar */
+      background-size: cover;
+      background-position: center;
+      filter: grayscale(100%) contrast(110%); /* Strong monochrome look */
+      border: 10px solid var(--pure-white);
+    }
+    .hero-mono .sitename-minimal {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    /* About/Description */
+    .about-mono { padding: 100px 0; background-color: #f9f9f9; }
+    .bio-text { font-size: 1.25rem; border-left: 3px solid var(--light-gray); padding-left: 30px; }
+
+    /* Skills: Percentage bars simplified */
+    .skills-mono { padding: 100px 0; }
+    .skill-item { margin-bottom: 30px; }
+    .skill-header { display: flex; justify-content: space-between; margin-bottom: 10px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+    .skill-bar-bg { height: 2px; background-color: var(--light-gray); width: 100%; position: relative; }
+    .skill-bar-fill { height: 2px; background-color: var(--primary-dark); width: 0; transition: 2s ease-out; position: absolute; left: 0; top: 0; }
+
+    /* Resume/Experience: Minimalist List */
+    .resume-mono { padding: 100px 0; background-color: var(--primary-dark); color: var(--pure-white); }
+    .resume-mono h2 { color: var(--pure-white); }
+    .resume-mono h2::after { background: var(--pure-white); }
+    .resume-mono p { color: var(--light-gray); }
+    
+    .timeline-item { border-bottom: 1px solid var(--secondary-dark); padding: 30px 0; }
+    .timeline-item:last-child { border-bottom: none; }
+    .time-meta { color: var(--accent-gray); font-size: 0.9rem; font-family: var(--font-heading); }
+    .job-title { font-family: var(--font-body); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 10px 0;}
+    .company-name { color: var(--light-gray); font-weight: 300; }
+
+    /* Footer */
+    footer { padding: 50px 0; text-align: center; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-gray); }
+  </style>
+</head>
+
+<body>
+
+  <div class="hero-mono">
+    <div class="sitename-minimal">R D J P</div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+          <p class="mb-2">CURRICULUM VITAE</p>
+          <h1>RADITYA<br>DWITAMA</h1>
+          <p class="mt-4 mb-5 col-md-9">An IT practitioner specializing in <strong>Software Engineering</strong>, currently deepening expertise in <strong>Modern Office Administration</strong> at Bogor EduCare. Bridging code and management.</p>
+          <a href="#about" class="btn-mono">Explore</a>
+        </div>
+        <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="300">
+          <div class="hero-portrait"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about" class="about-mono">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2 data-aos="fade-up">Profile Summary</h2>
+          <p class="bio-text" data-aos="fade-up" data-aos-delay="200">
+            A graduate of Software Engineering (SMK Infokom, 2025) with a strong foundation in backend development using PHP, SQL, and programming logic. Has 6 months of internship experience in production management and customer service at PT Tulip Diandra Raya. Currently pursuing studies at Bogor EduCare to integrate technical IT expertise with professional office administration management and business English communication.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-mono">
+    <div class="container">
+      <div class="row justifying-content-center">
+        <div class="col-lg-10">
+          <h2 data-aos="fade-up">Core Expertise</h2>
+          <div class="row mt-5">
+            
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
+              <div class="skill-item">
+                <div class="skill-header"><span>Microsoft Office Suite</span> <span>95%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header"><span>Business English</span> <span>80%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header"><span>Administrative Skill</span> <span>92%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
+              <div class="skill-item">
+                <div class="skill-header"><span>HTML / CSS / JS</span> <span>95%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header"><span>PHP Native / MySQL</span> <span>85%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+              </div>
+            </div>    
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="resume-mono">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          
+          <div class="mb-5">
+            <h2 data-aos="fade-up">Experience</h2>
+            
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="row">
+                <div class="col-md-3 time-meta">2024 (6 Months)</div>
+                <div class="col-md-9">
+                  <div class="job-title">Customer Service & Production</div>
+                  <div class="company-name">PT Tulip Diandra Raya</div>
+                  <p class="mt-2">Managing customer communication, order processing, and monitoring production workflow.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="row">
+                <div class="col-md-3 time-meta">2023 - 2024</div>
+                <div class="col-md-9">
+                  <div class="job-title">Steward & Operational</div>
+                  <div class="company-name">Sate Maranggi H. Enoh</div>
+                  <p class="mt-2">Maintaining cleanliness and orderliness of the dining area, kitchen, and service equipment.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 data-aos="fade-up">Education</h2>
+
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="row">
+                <div class="col-md-3 time-meta">2025 - Present</div>
+                <div class="col-md-9">
+                  <div class="job-title">Office Administration</div>
+                  <div class="company-name">Bogor EduCare</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="row">
+                <div class="col-md-3 time-meta">2022 - 2025</div>
+                <div class="col-md-9">
+                  <div class="job-title">Software Engineering (RPL)</div>
+                  <div class="company-name">SMK Infokom Bogor</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5 pt-5" data-aos="zoom-in">
+            <a href="../../portofolio/index.html#contact" class="btn-mono">Get In Touch</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      RDJP // Raditya Dwitama // 2026 // Digital Profile
+    </div>
+  </footer>
+
+  <script src="../../portofolio/assets/vendor/aos/aos.js"></script>
+  <script src="../../portofolio/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Initialize AOS Animation
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+
+    // Script sederhana untuk menganimasikan Skill Bar saat scroll
+    window.addEventListener('scroll', function() {
+      var skillsSection = document.getElementById('skills');
+      var skillsPos = skillsSection.getBoundingClientRect().top;
+      var screenPos = window.innerHeight / 1.3;
+
+      if(skillsPos < screenPos) {
+        var bars = document.querySelectorAll('.skill-bar-fill');
+        bars.forEach(function(bar) {
+          // Mengambil nilai width dari style inline yang sudah diset di HTML
+          var finalWidth = bar.style.width;
+          // Set width ke 0 dulu agar animasinya terlihat (jika belum di-set di CSS)
+          // bar.style.width = '0'; 
+          // Animasikan ke width final
+          setTimeout(function() {
+             bar.style.transition = '2s ease-out';
+             // Tidak perlu mengubah width lagi karena sudah diset di HTML. 
+             // Kita hanya perlu memicu browser untuk merender transisinya.
+          }, 100);
+        });
+      }
+    });
+    // Triger sekali saat load jika section sudah terlihat
+    window.dispatchEvent(new Event('scroll'));
+  </script>
+
+</body>
+</html>
